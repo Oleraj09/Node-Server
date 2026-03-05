@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-bridge",
+  "version": "1.0.0",
+  "description": "WhatsApp to Web live chat bridge",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "express": "^4.18.2",
+    "qrcode-terminal": "^0.12.0",
+    "socket.io": "^4.7.2",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
