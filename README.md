@@ -13,7 +13,7 @@ The easiest way to get your server running is to deploy it to a free or low-cost
 2. Sign up or log into your Render account.
 3. Follow the setup prompts to deploy your web service.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy) *(Note to Developer: Update this link with your actual Render deploy template link once the repository is live)*
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Oleraj09/Node-Server)
 
 ---
 
@@ -30,8 +30,8 @@ If you prefer to host this Node server on your own VPS (Virtual Private Server),
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/get-web-chat-server.git
-   cd get-web-chat-server
+   git clone https://github.com/Oleraj09/Node-Server.git
+   cd Node-Server
    ```
 
 2. **Install the dependencies:**
