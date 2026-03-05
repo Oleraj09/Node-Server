@@ -1,9 +1,7 @@
 services:
   - type: web
     name: get-web-chat-server
-    env: node
-    buildCommand: npm install
-    startCommand: npm start
+    env: docker
     envVars:
       - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
         value: "true"
