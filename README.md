@@ -4,16 +4,22 @@ This is the required external Node.js backend for the **Get Web Chat** WordPress
 
 ---
 
-## 🚀 Quick Deployment (Recommended)
+## 🚀 Cloud Hosting Recommendations
 
-The easiest way to get your server running is to deploy it to a free or low-cost cloud hosting provider. Select one of the buttons below to create your own server in minutes.
+Running this server requires a platform capable of handling headless Chromium instances (Puppeteer). While 100% free forever hosting is becoming rare, the following platforms offer generous free tiers or low-cost options that support Docker:
 
-### Deploy to Render
-1. Click the button below to deploy this repository directly to Render.
-2. Sign up or log into your Render account.
-3. Follow the setup prompts to deploy your web service.
+### 1. Railway.app (Recommended Free Tier)
+Railway provides a generous free tier of $5/month (around 500 hours) which supports Docker out of the box.
+* Sign up at [Railway.app](https://railway.app/).
+* Connect your GitHub and select this repository.
+* Railway will automatically detect the `Dockerfile` and build it.
 
+### 2. Render (Paid Plan Required)
+*Because this app requires Docker to run Chromium, Render requires a paid "Starter" database plan to deploy it.*
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Oleraj09/Node-Server)
+
+### 3. Oracle Cloud (Always Free)
+Oracle offers an exceptionally powerful "Always Free" tier (up to 4 ARM CPUs and 24GB RAM). If you are comfortable using SSH, you can launch a free instance, SSH in, and follow the Manual Deployment steps below.
 
 ---
 
