@@ -4,19 +4,28 @@ This is the required external Node.js backend for the **Get Web Chat** WordPress
 
 ---
 
-## 🚀 Cloud Hosting Recommendations
+## 🚀 The Easiest Free Hosting (For Beginners)
 
-Running this server requires a platform capable of handling headless Chromium instances (Puppeteer). While 100% free forever hosting is becoming rare, the following platforms offer generous free tiers or low-cost options that support Docker:
+Because this server needs to run a virtual web browser (Puppeteer) to connect to WhatsApp, standard cheap website hosts like GoDaddy or Netlify **will not work**. 
 
-### 1. Railway.app (Recommended Free Tier)
-Railway provides a generous free tier of $5/month (around 500 hours) which supports Docker out of the box.
+The absolute easiest, free way to host this for a normal user is **Render.com**.
+
+### 1. Render.com (Free & Easiest)
+Render offers a totally free tier that can run this server 24/7.
+1. Create a free account at [Render.com](https://render.com/).
+2. Click **New > Web Service**.
+3. Connect your GitHub account and select your `Node-Server` repository.
+4. Render will automatically detect it is a Node.js app!
+5. Make sure the type is set to **Free**.
+6. Click **Deploy**.
+
+Once deployed, click on the **Logs** tab in Render to see your WhatsApp QR code. Scan it from your phone!
+
+### 2. Railway.app (Alternative Free Tier)
+Railway provides a generous free tier of $5/month (around 500 hours) which works perfectly.
 * Sign up at [Railway.app](https://railway.app/).
-* Connect your GitHub and select this repository.
-* Railway will automatically detect the `Dockerfile` and build it.
-
-### 2. Render (Paid Plan Required)
-*Because this app requires Docker to run Chromium, Render requires a paid "Starter" database plan to deploy it.*
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Oleraj09/Node-Server)
+* Click "New Project" -> "Deploy from GitHub repo".
+* Select this repository. Railway will automatically build and start it.
 
 ### 3. Oracle Cloud (Always Free)
 Oracle offers an exceptionally powerful "Always Free" tier (up to 4 ARM CPUs and 24GB RAM). If you are comfortable using SSH, you can launch a free instance, SSH in, and follow the Manual Deployment steps below.
