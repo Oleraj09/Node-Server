@@ -1,2 +1,3 @@
-2026/03/06-00:47:08.498 3fd4 Creating DB c:\laragon\www\155west\wp-content\plugins\whatsapp-live-sync\node-server\.wwebjs_auth\session\Default\Local Storage\leveldb since it was missing.
-2026/03/06-00:47:08.543 3fd4 Reusing MANIFEST c:\laragon\www\155west\wp-content\plugins\whatsapp-live-sync\node-server\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/07-06:35:42.259 5d54 Reusing MANIFEST C:\laragon\www\155west\wp-content\plugins\node-server\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/07-06:35:42.264 5d54 Recovering log #3
+2026/03/07-06:35:42.266 5d54 Reusing old log C:\laragon\www\155west\wp-content\plugins\node-server\.wwebjs_auth\session\Default\Local Storage\leveldb/000003.log 

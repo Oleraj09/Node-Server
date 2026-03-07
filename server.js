@@ -1,5 +1,5 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
+const readline = require('readline');
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -24,9 +24,44 @@ const client = new Client({
 
 const sessions = {}; // Map of sessionId -> remoteId (WhatsApp contact)
 
-client.on('qr', (qr) => {
-    console.log('SCAN THIS QR CODE WITH WHATSAPP:');
-    qrcode.generate(qr, { small: true });
+client.on('qr', async (qr) => {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    console.log('\n--- WhatsApp Authentication Required ---');
+    rl.question('Please enter your WhatsApp phone number (with country code, e.g., 1234567890): ', async (phoneNumber) => {
+        try {
+            const numericPhone = phoneNumber.replace(/[^0-9]/g, '');
+
+            // Inject a dummy function to prevent the "not a function" error 
+            // when whatsapp-web.js evaluates the internal WhatsApp code.
+            if (client.pupPage) {
+                await client.pupPage.evaluate(() => {
+                    window.onCodeReceivedEvent = function (code) {
+                        console.log("Internal WhatsApp Web Code Triggered:", code);
+                        return code;
+                    };
+                });
+            }
+
+            // Wait a moment for the client to fully settle before requesting code
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            // Request the pairing code
+            const pairingCode = await client.requestPairingCode(numericPhone);
+
+            console.log('\n======================================================');
+            console.log('YOUR PAIRING CODE IS:', pairingCode);
+            console.log('Go to WhatsApp > Linked Devices > Link with phone number');
+            console.log('Enter the code above to link your account.');
+            console.log('======================================================\n');
+        } catch (err) {
+            console.error('Failed to request pairing code. Please check the phone number and try again.', err);
+        }
+        rl.close();
+    });
 });
 
 client.on('ready', () => {

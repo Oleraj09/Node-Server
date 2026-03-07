@@ -1,2 +1,3 @@
-2026/03/06-00:47:15.252 1434 Creating DB c:\laragon\www\155west\wp-content\plugins\whatsapp-live-sync\node-server\.wwebjs_auth\session\Default\GCM Store since it was missing.
-2026/03/06-00:47:15.262 1434 Reusing MANIFEST c:\laragon\www\155west\wp-content\plugins\whatsapp-live-sync\node-server\.wwebjs_auth\session\Default\GCM Store/MANIFEST-000001
+2026/03/07-06:35:50.383 5604 Reusing MANIFEST C:\laragon\www\155west\wp-content\plugins\node-server\.wwebjs_auth\session\Default\GCM Store/MANIFEST-000001
+2026/03/07-06:35:50.383 5604 Recovering log #3
+2026/03/07-06:35:50.384 5604 Reusing old log C:\laragon\www\155west\wp-content\plugins\node-server\.wwebjs_auth\session\Default\GCM Store/000003.log 
